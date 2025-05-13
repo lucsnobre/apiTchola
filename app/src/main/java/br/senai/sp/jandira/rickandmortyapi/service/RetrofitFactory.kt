@@ -1,6 +1,7 @@
 package br.senai.sp.jandira.rickandmortyapi.service
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 
 class RetrofitFactory {
 
@@ -12,4 +13,8 @@ class RetrofitFactory {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
+
+    fun getCharacterService(): CharacterService{
+        return retrofitFactory.create(CharacterService::class.java)
+    }
 }

@@ -18,4 +18,5 @@ interface CharacterService {
 
     @POST("character")
     fun insert(@Body character: Character): Call<Character>
+
 }
