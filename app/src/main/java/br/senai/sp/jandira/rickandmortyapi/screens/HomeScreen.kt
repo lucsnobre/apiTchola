@@ -4,8 +4,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
@@ -50,6 +52,7 @@ fun HomeScreen(modifier: Modifier = Modifier){
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold
         )
+        Spacer(modifier = Modifier.height(16.dp))
         OutlinedTextField(
             value = "",
             onValueChange = {},
@@ -64,6 +67,12 @@ fun HomeScreen(modifier: Modifier = Modifier){
                     )
                 }
             }
+        )
+        Spacer(modifier = Modifier.height(32.dp))
+        Text(
+            text = "Characters",
+            fontSize = 24.sp,
+            color = Color.White
         )
     }
 }
